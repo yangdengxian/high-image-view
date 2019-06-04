@@ -51,4 +51,4 @@ Open `index.html` in browser(Chrome,ie,firefox,360,etc) to see the result.
 ## description
 ###### This project depends `openseadragon`, if you are interested to the native codes, read them on github, please.
 
-###### This is only a web example implemented in pure JavaScript. If you want to load tiles (many images), build a pyramid, please. There is a another project for java to help you with building the tiles pyramid. Remember it, all of them will be start at the same time.
+###### This is only a web example implemented in pure JavaScript. If you want to load tiles (many images), build a pyramid, please. There is a another project for java([pyramidweb](https://github.com/yangdengxian/pyramidweb "pyramidweb")) to help you with building the tiles pyramid. Remember it, all of them will be start at the same time.
