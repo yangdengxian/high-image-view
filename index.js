@@ -13,21 +13,22 @@ import OpenSeadragon_DZI from './src/OpenSeadragon/DZI/OpenSeadragon_DZI';
     }
 }); */
 ajaxGetReqeust(Config.tileServerUrl, {
-    dataType: "json",
-    data: {
-        imagePath: Config.sourceImagesUrl + "/sourceImages/cactus-and-mountains-high-resolution_.jpg",
-        // imagePath: "http://highresolution.photography/images/forth-bridge-blues-main.jpg",
-    }
-}).then(result => {
-    if (result && result.tilesPath) {
-        new OpenSeadragon_DZI({
-            id: "openSeadragon",
-            prefixUrl: "images/",
-            tileSources: Config.fileServerUrl + result.tilesPath, //必填
-        });
-    }
-
-}, error => {
-    console.error(error);
-
-});
+	dataType: 'json',
+	data: {
+		imagePath: Config.sourceImagesUrl + '/high-resolution-desktop-wallpaper3.jpg',
+		// imagePath: "http://highresolution.photography/images/forth-bridge-blues-main.jpg",
+	},
+}).then(
+	result => {
+		if (result && result.tilesPath) {
+			new OpenSeadragon_DZI({
+				id: 'openSeadragon',
+				prefixUrl: 'images/',
+				tileSources: Config.fileServerUrl + result.tilesPath, //必填
+			});
+		}
+	},
+	error => {
+		console.error(error);
+	}
+);
