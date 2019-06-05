@@ -13,7 +13,7 @@ class OpenSeadragon_CTS extends OpenSeadragonImageViewer {
      */
     constructor(param) {
         param = Object.assign(param || {}, {
-            prefixUrl: "/openseadragon/images/",
+            prefixUrl: "images/",
             navigatorSizeRatio: 0.25,
             wrapHorizontal: true,
             tileSources: {
