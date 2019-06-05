@@ -1,0 +1,30 @@
+{
+    "opts": {
+        "template": "jsdoc/templates/default",
+        "encoding": "utf8",
+        "destination": "dist/apidoc",
+        "recurse": true
+    },
+    "plugins": ["jsdoc/plugins/markdown"],
+    "recurseDepth": 10,
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_",
+        "include": [
+            "src/OpenSeadragon"
+        ],
+        "exclude": [
+
+        ]
+
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc", "closure"]
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    }
+}

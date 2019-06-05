@@ -39,6 +39,17 @@ Open `index.html` in browser(Chrome,ie,firefox,360,etc) to see the result.
 
 > -   add imageFileServer
 
+**v1.2.0**
+
+> -   update class OpenSeadragon_DZI
+> -   add api doc
+
+**v1.2.1**
+
+> -   update webpack proxy configuration (multiple)
+#### How to config webpack proxy multiple?
+###### https://webpack.js.org/configuration/dev-server/#devserverproxy
+
 ## dependencies
 
 **dependencies**

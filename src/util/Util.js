@@ -83,10 +83,9 @@ function ajaxGetReqeust(url, param) {
         dataType: param.dataType || 'json',
         type: 'GET',
         cache: param.cache || true, //默认值: true，dataType 为 script 和 jsonp 时默认为 false。设置为 false 将不缓存此页面be
-        beforeSend: function(e) {
-            if (e.readyState !== 4) {
-                document.getElementById('openSeadragon').style.visibility = "hidden";
-            }
+        beforeSend: param.beforeSend || function(e) {
+            console.log(e);
+
         },
         success: function(result) {
             $defferd.resolve(result);
@@ -94,15 +93,11 @@ function ajaxGetReqeust(url, param) {
         error: function(error) {
             $defferd.reject(error);
         },
-        complete(XMLHttpRequest, status) {
+        complete: param.complete || function(XMLHttpRequest, status) {
             if (status == 'error' || status == 'timeout') { //超时,status还有success,error等值的情况
                 console.error(url, param, status);
                 XMLHttpRequest.abort();
             }
-            setTimeout(function() {
-                document.getElementById('load').style.visibility = "hidden";
-                document.getElementById('openSeadragon').style.visibility = "visible";
-            }, 1000);
         }
     })
     return $defferd;
