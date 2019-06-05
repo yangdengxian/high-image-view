@@ -21,7 +21,7 @@ class OpenSeadragon_DZI {
             tileSources: "/imageDZI/flower.dzi",
             prefixUrl: 'images/',
         });
-        this.createTileSources(param);
+        this.openSeadragonView = this.createTileSources(param);
     }
 
     /**
@@ -29,7 +29,7 @@ class OpenSeadragon_DZI {
      * @param {*} param 
      */
     createTileSources(param) {
-        ajaxGetReqeust(param.tileServerUrl, {
+        return ajaxGetReqeust(param.tileServerUrl, {
             dataType: 'json',
             data: {
                 imagePath: param.imagePath,
@@ -57,11 +57,13 @@ class OpenSeadragon_DZI {
         }).then(
             result => {
                 if (result && result.tilesPath) {
-                    new OpenSeadragonImageViewer({
+                    /* new OpenSeadragonImageViewer({
                         id: param.id,
                         prefixUrl: param.prefixUrl,
                         tileSources: param.tileSources + result.tilesPath, //必填
-                    });
+                    }); */
+                    param.tileSources += result.tilesPath;
+                    return new OpenSeadragonImageViewer(param);
                 }
             },
             error => {

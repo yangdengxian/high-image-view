@@ -19,4 +19,12 @@ const viewer = new OpenSeadragon_DZI({
     imagePath: Config.sourceImagesUrl + '/high-resolution-desktop-wallpaper3.jpg',
     tileServerUrl: Config.tileServerUrl,
     tileSources: Config.fileServerUrl, //必填
+    // Initial rotation angle
+    degrees: 90,
+    // Show rotation buttons
+    showRotationControl: true,
+    // Enable touch rotation on tactile devices
+    gestureSettingsTouch: {
+        pinchRotate: true
+    }
 });
