@@ -52,7 +52,7 @@ module.exports = {
         overlay: true,
         proxy: [{
             context: ['/imageDZI', '/fileserver', '/favicon.ico'],
-            target: 'http://127.0.0.1:8084',
+            target: 'http://10.88.107.244:8084',
             changeOrigin: true, // target是域名的话，需要这个参数，
             secure: true, // 设置支持https协议的代理
             // pathRewrite: { '^/imageDZI': '' },
