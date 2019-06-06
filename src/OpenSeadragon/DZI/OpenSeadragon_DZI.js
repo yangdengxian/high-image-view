@@ -44,7 +44,7 @@ class OpenSeadragon_DZI {
             },
             complete: (XMLHttpRequest, status) => {
                 if (status == 'error' || status == 'timeout') { //超时,status还有success,error等值的情况
-                    console.error(url, param, status);
+                    console.error(status);
                     XMLHttpRequest.abort();
                 }
                 setTimeout(function() {
