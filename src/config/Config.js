@@ -7,6 +7,6 @@ const Config = {
     //服务切片存储地址
     fileServerUrl: '/fileserver/',
     //切片输出地址
-    sourceImagesUrl: 'http://10.88.107.244:8081/imagesClient/',
+    sourceImagesUrl: 'http://127.0.0.1:8081/imagesClient/',
 };
 export default Config;
