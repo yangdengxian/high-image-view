@@ -16,7 +16,7 @@
     "author": "ydx",
     "license": "ISC",
     "dependencies": {
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "openseadragon": "^2.4.0"
     },
     "devDependencies": {
